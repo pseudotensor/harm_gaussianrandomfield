@@ -1,0 +1,4 @@
+#N-INDEX,INDEX,seed,EQK,kmin,kmax,nodiv,betanormtype,betaact,helicity,betot,alphahel,divBavg,divBavgnorm,divBmax,divBmaxnorm,divBavgnorm2,divAavg,divAavgnorm,divAmax,divAmaxnorm,divAavgnorm2
+0     -7.33333333333333 70                     2                     2                     4 1 0                   100 -6.09268751103059e-05  0.000574062459157374     -9.42215497049628  1.82201165785491e-18   0.00341796875079333  1.94289029309402e-16                     1  1.31180668054044e-16
+ 0.000306329576201835      1.42199155185451    0.0255129744112106      751.458192725614     0.859689815722528
+

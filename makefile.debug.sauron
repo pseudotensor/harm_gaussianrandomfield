@@ -1,0 +1,43 @@
+#
+#
+#
+# for alphas
+#CFLAGS = -fast -arch ev67
+#LDFLAGS = -lm -lrfftw -lfftw
+#CC = ccc
+#
+# for intel box
+#CFLAGS=-O3 -tpp7 -axiMKW -ipo -unroll -Wall -w2 -wd=175,177,279,593,869,810,981,1418,1419 -I/usr/local/include -I/usr/local/fftw.icc/include/
+#CFLAGS=-static -O3 -tpp7 -axiMKW -ipo -unroll -Wall -w2
+#-wd=175,177,279,593,869,810,981,1418,1419 -I/usr/local/fftw.icc/include/ 
+CFLAGS=-static -g -0O -Wall  -I/usr/local/fftw.icc/include/ 
+#CFLAGS = -O2 -Wall -I/usr/local/include
+LDFLAGS =  -L/usr/local/fftw.icc/lib -lm -lrfftw -lfftw 
+CC = icc
+
+all: inits
+
+SRCS = \
+inits.c ranc.c
+
+OBJS = \
+inits.o ranc.o
+
+inits: $(OBJS) $(SRCS) makefile.sauron
+	$(CC) $(CFLAGS) -o inits $(OBJS) $(LDFLAGS)
+
+clean:
+	rm *.o
+
+cleani:
+	rm *.o *.il
+
+cleanall:
+	rm *.o *.il *~
+
+cleanbackup:
+	rm *~
+
+
+
+#inits.o : global.h global2dsup.h global3dsup.h
